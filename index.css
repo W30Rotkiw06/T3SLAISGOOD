@@ -20,6 +20,7 @@ footer {
     text-align: center;
     font-size:x-small;
     font-family: Arial;
+    padding-bottom: 3px;
   }
 
   .model{
@@ -91,7 +92,7 @@ a:active{
 
 .notFound{
     font-size: large;
-    font-family: 'Times New Roman';
+    font-family: Geneva;
     text-align: center;
     
 }
