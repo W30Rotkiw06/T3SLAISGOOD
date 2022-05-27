@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="UFT-8">
+    <title>Kup TESLA model S</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="guziczki.css">
+</head>
+
+<script>
+    // Definiowanie potrzebnych zmiennych
+
+    var zwykla; // Odnosi się do tego, czy auto jest w wersji ZWYKŁA / SPORT
+    var kolor; // Jak nazwa wskazuje, zmienna odpowiedzialna za kolor
+    var plik; // Zmienna zawierająca ścieżkę pliku obrazka
+    var czysport = false; // dodaje do ścieżki pliku informację o wersji sport/zwykła
+    var autopilot = 0; // dolicza do ceny autopilota
+    var cenaZwykla = 390000; // cena standardowa
+
+    function standard(){
+        czysport = false;
+        plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        cenaZwykla = 390000.00;
+        cena = cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+    }
+    function sport(){
+        czysport = "Sport";
+        plik="<img src=\"teslaSczerwonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        cenaZwykla = 420000.00;
+        cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+
+    }
+
+    function autopilotTAK(){
+        autopilot = 15000.00;
+        cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+    }
+
+    function autopilotNIE(){
+        autopilot = 0;
+        cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+    }
+
+    function domyslny(){
+
+        plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        cena= 390000.00 +",00 zł" ;document.getElementById("cena").innerHTML=cena;
+    }
+
+    function czerwony(){
+
+        if (sport == true){
+            plik="<img src=\"teslaSczerwonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    function czarny(){
+        if (sport == true){
+            plik="<img src=\"teslaSczarnaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSczarna.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    function szary(){
+        if (sport == true){
+            plik="<img src=\"teslaSszaraSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSszara.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    function zielony(){
+        if (sport == true){
+            plik="<img src=\"teslaSzielonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSzielona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    function zolty(){
+        if (sport == true){
+            plik="<img src=\"teslaSzoltaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSzolta.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    function bialy(){
+        if (sport == true){
+            plik="<img src=\"teslaSbialaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }else{
+            plik="<img src=\"teslaSbiala.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        }
+    }
+
+    
+
+
+</script>
+
+<body onload="domyslny()"> 
+
+    <header>
+        <h1><a href="index.html">TESLA</a></h1>
+    </header>
+
+    <table border="0">
+        <tr>
+        <td>
+        <table border="0" class="okienko">
+         <tr>
+             <th color=>Oto twoja TESLA:</th>
+         </tr>   
+         <tr>
+             <td>
+             <div style="text-align: center" id="tesla" class="okienkopct"></div>
+            </td>
+
+         </tr>
+        </table>
+        </td><td>
+         <table class="wybierajka" align="right"> <!--TABELKA KONFIGURATOR-->
+             <tr>
+                <td colspan="6" class="ver"><div style="text-align: center">    Wybierz model</div></td>
+             </tr>
+             <tr>   
+                <td colspan="3"><div style="text-align: right"><input type="button"  value="        Standard        " class="guziczek" onclick="standard()"></div></td>
+                <td colspan="3"><div style="text-align: left"><input type="button" value="        SPACEX      " class="guziczekPRO" onclick="sport()"></div></td>
+             </tr>
+
+            <tr>
+                <td colspan="6" class="ver"><div style="text-align: center">Autopilot?</div></td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><div style="text-align: right"><input type="button"  value="        TAK        " class="guziczekPRO" onclick="autopilotTAK()"></div></td>
+                <td colspan="3"><div style="text-align: left"><input type="button" value="        NIE        " class="guziczek" onclick="autopilotNIE()"></div></td>
+
+            </tr>
+
+             <tr>
+                <td colspan="6" class="ver"><div style="text-align: center">    Wybierz kolor</div></td>
+             </tr>
+             <tr>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czerwony" onclick="czerwony()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czarny" onclick="czarny()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="szary" onclick="szary()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="zolty" onclick="zolty()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="zielony" onclick="zielony()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="bialy" onclick="bialy()"></div></td>
+                
+             </tr>
+             <tr>
+                 <td colspan="6" class="ver">CENA</td>
+             </tr>
+             <tr>
+                <td colspan="6" class="cena"><div id="cena" class="cena"></div></td>
+            </tr>
+            <tr>
+                <td colspan="6"><a href="https://www.tesla.com/pl_pl/models/design"><button class="guziczekPRO">KUP TERAZ</a></td>
+            </tr>
+
+            
+         </table>
+        </td>
+     </tr>
+ </table>
+
+    </table>
+
+    <footer>
+        <p>Strona powstala w celach humorystycznych (oraz jako projekt na informatyke), pozdrawiamy Elona Muska oraz serdecznie prosimy, abys nas nie pozwal.<br>Autorzy: Wiktor Wieczorek, Stanislaw Tucholka i Hubert Najmowicz. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Kliknij po wiecej informacji.</a></p>
+    </footer>
+</body>
+</html>

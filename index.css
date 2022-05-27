@@ -1,0 +1,121 @@
+.tytul{
+    text-align: center;
+    padding: 15px;
+}
+
+header {
+    background-color: #F44340;
+    color: #ffffff;
+    padding: 3px;
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-size: x-large;
+  }
+
+footer {
+    background-color: #F44340;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-size:x-small;
+    font-family: Arial;
+  }
+
+  .model{
+    background-color: gray;
+    color: black;
+    padding: 2%;
+    border: 5px solid black;
+}
+
+.modelspct{
+    padding: 0px;
+    background-image: url(teslaSczerwona.png);
+
+    background-size: 100%;
+    padding-bottom: 38%;
+}
+.model3pct{
+    padding: 10px;
+    background-image: url(teslas.jpg);
+    background-size: 100%;
+    padding-bottom: 38%;
+
+}
+
+.modelxpct{
+    padding: 10px;
+    background-image: url(teslas.jpg);
+    background-size: 100%;
+    padding-bottom: 38%;
+
+}
+
+.modelypct{
+    padding: 10px;
+    background-image: url(teslas.jpg);
+    background-size: 100%;
+    padding-bottom: 38%;
+
+}
+
+table{
+    width: 100%;
+    font-size: large;
+}
+
+html{
+    background-color: #c1cadf
+}
+
+a{
+    color: white;
+    font-family: Arial;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+a:active{
+    color: darkblue;
+  }
+
+
+.nr{
+    font-size: xxx-large;
+    font-family: 'Times New Roman';
+    text-align: center;
+    
+}
+
+.notFound{
+    font-size: large;
+    font-family: 'Times New Roman';
+    text-align: center;
+    
+}
+
+
+.okienkopct{
+    width: 500px;
+  }
+  
+  .wybierajka{
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    background-color: white;
+  }
+  
+  .ver{
+    font-size: x-large;
+    font-family: 'Times New Roman';
+  }
+  
+    
+  .cena{
+    font-size: xx-large;
+    text-align: center;
+  }

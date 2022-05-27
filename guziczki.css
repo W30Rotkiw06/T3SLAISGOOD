@@ -1,0 +1,119 @@
+
+/* Guziczki */
+.guziczek{
+    size: 40px;
+    text-transform: uppercase; 
+    background-color: blue;  
+    border: 3px solid lightblue;
+    color: lightblue;
+    font-size: large;
+    padding: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .guziczek:active{
+    background-color: darkblue; 
+  }
+
+  .guziczek:hover{
+    color: white;
+  }
+  
+  .guziczekPRO{
+    size: 40px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    background-color: lightblue;  
+    border: 3px solid blue;
+    color: blue;
+    font-size: large;
+    padding: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 10px;
+  }
+  
+  .guziczekPRO:active{
+    background-color: rgb(127, 127, 182);
+  }
+
+  .guziczekPRO:hover{
+    color: darkblue;
+  }
+
+  a.guziczekPRO{
+    color: blue;
+  }
+
+   a.guziczekPRO:active{
+      background-color: rgb(127, 127, 182);
+    }
+    a.guziczekPRO:hover{
+        color: darkblue;
+    }
+
+    a{
+        color: white;
+        font-family: Arial;
+        text-decoration: none;
+    }
+    a:hover{
+        color: blue;
+    }
+    a:active{
+      color: darkblue;
+    }
+
+
+  
+  .czerwony{
+    background-color: red;
+    color: red;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .czarny{
+    background-color: black;
+    color: black;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .szary{
+    background-color: gray;
+    color: gray;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .zolty{
+    background-color: yellow;
+    color: yellow;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .zielony{
+    background-color: green;
+    color: green;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .czerwony{
+    background-color: red;
+    color: red;
+    border-radius: 10px;
+    font-size: xx-large;
+  }
+  
+  .bialy{
+    background-color: whitesmoke;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: xx-large;
+  
+  }
