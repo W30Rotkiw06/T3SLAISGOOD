@@ -24,41 +24,40 @@ footer {
   }
 
   .model{
-    background-color: gray;
+    background-color: rgb(221, 194, 194);
     color: black;
     padding: 2%;
     border: 5px solid black;
 }
 
 .modelspct{
-    padding: 10px;
     background-image: url(teslaSczerwona.png);
-
-    background-size: 103%;
-    padding-top: 11%;
-    padding-bottom: 28%;
+    background-size: 101%;
+    padding-top: 5%;
+    padding-bottom: 32%;
 }
 .model3pct{
     padding: 10px;
     background-image: url(tesla3szara.png);
     background-size: 100%;  
-    padding-bottom: 37%;
+    padding-bottom: 36%;
 
 }
 
 .modelxpct{
     padding: 10px;
     background-image: url(teslaXbiala.png);
-    background-size: 100%;
-    padding-bottom: 37%;
+    background-size: 99%;
+    padding-bottom: 36%;
 
 }
 
 .modelypct{
+    padding-right: 30%;
     padding: 10px;
     background-image: url(teslaYzolta.png);
-    background-size: 100%;
-    padding-bottom: 37%;
+    background-size: 96%;
+    padding-bottom: 36%;
 
 }
 
