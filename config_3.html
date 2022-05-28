@@ -11,21 +11,69 @@
     // Definiowanie potrzebnych zmiennych
 
     var zwykla; // Odnosi się do tego, czy auto jest w wersji ZWYKŁA / SPORT
-    var kolor; // Jak nazwa wskazuje, zmienna odpowiedzialna za kolor
     var plik; // Zmienna zawierająca ścieżkę pliku obrazka
     var czysport = false; // dodaje do ścieżki pliku informację o wersji sport/zwykła
     var autopilot = 0; // dolicza do ceny autopilota
     var cenaZwykla = 360000; // cena standardowa
+    var kolorek = "czerwony"; //zmienna odpowiedzialna za kolor w guzikach standard/spacex
 
     function standard(){
         czysport = false;
-        plik="<img src=\"tesla3czerwona.png\" style=\"widh: 600\">";document.getElementById("tesla").innerHTML=plik;
+
+        switch(kolorek) {
+            case "czerwony":
+                plik="<img src=\"tesla3czerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "czarny":
+                plik="<img src=\"tesla3czarna.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "szary":
+                plik="<img src=\"tesla3szara.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "zielony":
+                plik="<img src=\"tesla3zielona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "zolty":
+                plik="<img src=\"tesla3zolta.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "bialy":
+                plik="<img src=\"tesla3biala.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            default:
+                plik="<img src=\"tesla3czerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+        }
+
         cenaZwykla = 360000.00;
         cena = cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
     }
     function sport(){
-        czysport = "Sport";
-        plik="<img src=\"tesla3czerwonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        czysport = true;
+        
+        switch(kolorek) {
+            case "czerwony":
+                plik="<img src=\"tesla3czerwonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "czarny":
+                plik="<img src=\"tesla3czarnaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "szary":
+                plik="<img src=\"tesla3szaraTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "zielony":
+                plik="<img src=\"tesla3zielonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "zolty":
+                plik="<img src=\"tesla3zoltaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            case "bialy":
+                plik="<img src=\"tesla3bialaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+            default:
+                plik="<img src=\"tesla3czerwonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+                break;
+        }
+
         cenaZwykla = 400000.00;
         cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
 
@@ -43,54 +91,59 @@
 
     function domyslny(){
 
-        plik="<img src=\"tesla3czerwona.png\" style=\"width: 600;\">";document.getElementById("tesla").innerHTML=plik;
+        plik="<img src=\"tesla3czerwona.png\"  width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         cena= 360000.00 +",00 zł" ;document.getElementById("cena").innerHTML=cena;
     }
 
     function czerwony(){
-
-        if (sport == true){
-            plik="<img src=\"tesla3czerwonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "czerwony";
+        if (czysport == true){
+            plik="<img src=\"tesla3czerwonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3czerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }
     }
 
     function czarny(){
-        if (sport == true){
-            plik="<img src=\"tesla3czarnaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "czarny";
+        if (czysport == true){
+            plik="<img src=\"tesla3czarnaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3czarna.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }
     }
 
     function szary(){
-        if (sport == true){
-            plik="<img src=\"tesla3szaraSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "szary";
+        if (czysport == true){
+            plik="<img src=\"tesla3szaraTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3szara.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }
     }
 
     function zielony(){
-        if (sport == true){
-            plik="<img src=\"tesla3zielonaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "zielony";
+        if (czysport == true){
+            plik="<img src=\"tesla3zielonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3zielona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }
     }
 
     function zolty(){
-        if (sport == true){
-            plik="<img src=\"tesla3zoltaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "zolty";
+        if (czysport == true){
+            plik="<img src=\"tesla3zoltaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3zolta.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }
     }
 
     function bialy(){
-        if (sport == true){
-            plik="<img src=\"tesla3bialaSport.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        kolorek = "bialy";
+        if (czysport == true){
+            plik="<img src=\"tesla3bialaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }else{
             plik="<img src=\"tesla3biala.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         }

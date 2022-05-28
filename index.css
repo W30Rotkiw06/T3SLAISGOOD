@@ -31,33 +31,34 @@ footer {
 }
 
 .modelspct{
-    padding: 0px;
+    padding: 10px;
     background-image: url(teslaSczerwona.png);
 
-    background-size: 100%;
-    padding-bottom: 38%;
+    background-size: 103%;
+    padding-top: 11%;
+    padding-bottom: 28%;
 }
 .model3pct{
     padding: 10px;
-    background-image: url(teslas.jpg);
-    background-size: 100%;
-    padding-bottom: 38%;
+    background-image: url(tesla3szara.png);
+    background-size: 100%;  
+    padding-bottom: 37%;
 
 }
 
 .modelxpct{
     padding: 10px;
-    background-image: url(teslas.jpg);
+    background-image: url(teslaXbiala.png);
     background-size: 100%;
-    padding-bottom: 38%;
+    padding-bottom: 37%;
 
 }
 
 .modelypct{
     padding: 10px;
-    background-image: url(teslas.jpg);
+    background-image: url(teslaYzolta.png);
     background-size: 100%;
-    padding-bottom: 38%;
+    padding-bottom: 37%;
 
 }
 
