@@ -17,8 +17,23 @@
     var cenaZwykla = 390000; // cena standardowa
     var kolorek = "czerwony";
 
+    // Zmienne z informacjami do opisu
+    var maxspeed = "290 km/h";
+    var acceleration = "2,8 s";
+    var range = "600 km";
+    var horsepower = "900 KM";
+
+
+
     function standard(){
         czysport = false;
+
+        // Opis 
+        maxspeed = "MAX PRĘDKOŚĆ: 290 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
+        acceleration = "0-100 km/h: 2,8 s";document.getElementById("acceleration").innerHTML=acceleration;
+        range = "ZASIĘG: 600 km";document.getElementById("range").innerHTML=range;
+        horsepower = "MOC SILNIKA: 900 KM";document.getElementById("horsepower").innerHTML=horsepower;
+
 
         switch(kolorek) {
             case "czerwony":
@@ -44,12 +59,16 @@
                 break;
         }
 
-        cenaZwykla = 360000.00;
-        cena = cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
     }
     function sport(){
         czysport = true;
         
+        // Opis 
+        maxspeed = "MAX PRĘDKOŚĆ: 340 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
+        acceleration = "0-100 km/h: 2,1 s";document.getElementById("acceleration").innerHTML=acceleration;
+        range = "ZASIĘG: 700 km";document.getElementById("range").innerHTML=range;
+        horsepower = "MOC SILNIKA: 1050 KM";document.getElementById("horsepower").innerHTML=horsepower;
+
         switch(kolorek) {
             case "czerwony":
                 plik="<img src=\"teslaSczerwonaTurbo.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
@@ -76,19 +95,30 @@
     }
 
     function autopilotTAK(){
-        autopilot = 15000.00;
-        cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+        autopilot = 15000;
+        cena= cenaZwykla + autopilot +",00 zł" ;
+        cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
+        czyautopilot = "AUTOPILOT: TAK";document.getElementById("czyautopilot").innerHTML=czyautopilot;
     }
 
     function autopilotNIE(){
         autopilot = 0;
-        cena= cenaZwykla + autopilot + ",00 zl" ;document.getElementById("cena").innerHTML=cena;
+        cena= cenaZwykla + autopilot + ",00 zl";
+        cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
+        czyautopilot = "AUTOPILOT: NIE";document.getElementById("czyautopilot").innerHTML=czyautopilot;
     }
 
     function domyslny(){
 
         plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
-        cena= 390000.00 +",00 zł" ;document.getElementById("cena").innerHTML=cena;
+        cena= "CENA: " + 390000.00 +",00 zł" ;document.getElementById("cena").innerHTML=cena;
+
+        // Opis 
+        maxspeed = "MAX PRĘDKOŚĆ: 290 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
+        acceleration = "0-100 km/h: 2,8 s";document.getElementById("acceleration").innerHTML=acceleration;
+        range = "ZASIĘG: 600 km";document.getElementById("range").innerHTML=range;
+        horsepower = "MOC SILNIKA: 900 KM";document.getElementById("horsepower").innerHTML=horsepower;
+        czyautopilot = "AUTOPILOT: NIE";document.getElementById("czyautopilot").innerHTML=czyautopilot;
     }
 
 
@@ -204,11 +234,34 @@
                 
              </tr>
              <tr>
-                 <td colspan="6" class="ver">CENA</td>
-             </tr>
-             <tr>
-                <td colspan="6" class="cena"><div id="cena" class="cena"></div></td>
+                 <td colspan="6" class="ver">SZCZEGÓŁY TWOJEGO ZAMÓWIENIA: </td>
             </tr>
+
+            <tr><td colspan="6" class="opis">
+                <div id="czyautopilot"></div>
+            </td></tr>
+
+            <tr><td colspan="6" class="opis">
+                <div id="horsepower"></div>
+            </td></tr>
+
+            <tr><td colspan="6" class="opis">
+                <div id="acceleration"></div>
+            </td></tr>
+
+            <tr><td colspan="6" class="opis">
+                <div id="range"></div>
+            </td></tr>
+
+            <tr><td colspan="6" class="opis">
+                <div id="maxspeed"></div>
+            </td></tr>
+                        
+            <tr><td colspan="6" class="opis">
+                <div id="cena"></div>
+            </td></tr>
+            
+
             <tr>
                 <td colspan="6"><a href="https://www.tesla.com/pl_pl/models/design"><button class="guziczekPRO">KUP TERAZ</a></td>
             </tr>
