@@ -14,7 +14,8 @@
     var plik; // Zmienna zawierająca ścieżkę pliku obrazka
     var czysport = false; // dodaje do ścieżki pliku informację o wersji sport/zwykła
     var autopilot = 0; // dolicza do ceny autopilota
-    var cenaZwykla = 390000; // cena standardowa
+    var cenaZwykla = 425000; // cena standardowa
+    var cenaSport = 0; // dolicza do ceny pakiet spacex
     var kolorek = "czerwony";
 
     // Zmienne z informacjami do opisu
@@ -23,16 +24,30 @@
     var range = "600 km";
     var horsepower = "900 KM";
 
-
-
-    function standard(){
-        czysport = false;
+    function domyslny(){
+        plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        cena= "CENA: " + cenaZwykla +",00 zł" ;document.getElementById("cena").innerHTML=cena;
 
         // Opis 
         maxspeed = "MAX PRĘDKOŚĆ: 290 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
         acceleration = "0-100 km/h: 2,8 s";document.getElementById("acceleration").innerHTML=acceleration;
         range = "ZASIĘG: 600 km";document.getElementById("range").innerHTML=range;
-        horsepower = "MOC SILNIKA: 900 KM";document.getElementById("horsepower").innerHTML=horsepower;
+        horsepower = "MOC SILNIKA: 1000 KM";document.getElementById("horsepower").innerHTML=horsepower;
+        czyautopilot = "AUTOPILOT: NIE";document.getElementById("czyautopilot").innerHTML=czyautopilot;
+    }
+
+    function standard(){
+        czysport = false;
+        cenaSport = 0;
+        cena= cenaZwykla + autopilot + cenaSport + ",00 zl";
+        cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
+
+
+        // Opis 
+        maxspeed = "MAX PRĘDKOŚĆ: 290 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
+        acceleration = "0-100 km/h: 2,8 s";document.getElementById("acceleration").innerHTML=acceleration;
+        range = "ZASIĘG: 600 km";document.getElementById("range").innerHTML=range;
+        horsepower = "MOC SILNIKA: 1000 KM";document.getElementById("horsepower").innerHTML=horsepower;
 
 
         switch(kolorek) {
@@ -62,12 +77,17 @@
     }
     function sport(){
         czysport = true;
+        cenaSport = 100000;
+        cena= cenaZwykla + autopilot + cenaSport + ",00 zl";
+        cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
+
         
         // Opis 
         maxspeed = "MAX PRĘDKOŚĆ: 340 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
         acceleration = "0-100 km/h: 2,1 s";document.getElementById("acceleration").innerHTML=acceleration;
         range = "ZASIĘG: 700 km";document.getElementById("range").innerHTML=range;
-        horsepower = "MOC SILNIKA: 1050 KM";document.getElementById("horsepower").innerHTML=horsepower;
+        horsepower = "MOC SILNIKA: 1250 KM";document.getElementById("horsepower").innerHTML=horsepower;
+
 
         switch(kolorek) {
             case "czerwony":
@@ -96,31 +116,17 @@
 
     function autopilotTAK(){
         autopilot = 15000;
-        cena= cenaZwykla + autopilot +",00 zł" ;
+        cena= cenaZwykla + cenaSport + autopilot +",00 zł" ;
         cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
         czyautopilot = "AUTOPILOT: TAK";document.getElementById("czyautopilot").innerHTML=czyautopilot;
     }
 
     function autopilotNIE(){
         autopilot = 0;
-        cena= cenaZwykla + autopilot + ",00 zl";
+        cena= cenaZwykla + cenaSport + autopilot + ",00 zl";
         cena = "CENA: " + cena;document.getElementById("cena").innerHTML=cena;
         czyautopilot = "AUTOPILOT: NIE";document.getElementById("czyautopilot").innerHTML=czyautopilot;
     }
-
-    function domyslny(){
-
-        plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
-        cena= "CENA: " + 390000.00 +",00 zł" ;document.getElementById("cena").innerHTML=cena;
-
-        // Opis 
-        maxspeed = "MAX PRĘDKOŚĆ: 290 km/h";document.getElementById("maxspeed").innerHTML=maxspeed;
-        acceleration = "0-100 km/h: 2,8 s";document.getElementById("acceleration").innerHTML=acceleration;
-        range = "ZASIĘG: 600 km";document.getElementById("range").innerHTML=range;
-        horsepower = "MOC SILNIKA: 900 KM";document.getElementById("horsepower").innerHTML=horsepower;
-        czyautopilot = "AUTOPILOT: NIE";document.getElementById("czyautopilot").innerHTML=czyautopilot;
-    }
-
 
     function czerwony(){
         kolorek = "czerwony";
@@ -265,17 +271,15 @@
             <tr>
                 <td colspan="6"><a href="https://www.tesla.com/pl_pl/models/design"><button class="guziczekPRO">KUP TERAZ</a></td>
             </tr>
+        </table>
+    </td>
+ </tr>
+</table>
+</table>
 
-            
-         </table>
-        </td>
-     </tr>
- </table>
+<footer>
+    <p>Strona powstala w celach humorystycznych (oraz jako projekt na informatyke), pozdrawiamy Elona Muska oraz serdecznie prosimy, abys nas nie pozwal.<br>Autorzy: <a href="https://github.com/W30Rotkiw06/">Wiktor Wieczorek</a>, Stanislaw Tuchołka i Hubert Najmowicz. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Kliknij po wiecej informacji.</a><a href="kochamelonamuska.html">:-)</a></p>
+</footer>
 
-    </table>
-
-    <footer>
-        <p>Strona powstala w celach humorystycznych (oraz jako projekt na informatyke), pozdrawiamy Elona Muska oraz serdecznie prosimy, abys nas nie pozwal.<br>Autorzy: Wiktor Wieczorek, Stanislaw Tucholka i Hubert Najmowicz. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Kliknij po wiecej informacji.</a></p>
-    </footer>
 </body>
 </html>
