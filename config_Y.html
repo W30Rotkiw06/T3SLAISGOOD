@@ -16,7 +16,7 @@
     var autopilot = 0; // dolicza do ceny autopilota
     var cenaZwykla = 270000; // cena standardowa
     var cenaSport = 0; // dolicza do ceny pakiet spacex
-    var kolorek = "czerwony"; //zmienna odpowiedzialna za kolor w guzikach standard/spacex
+    var kolorek = "szary"; //zmienna odpowiedzialna za kolor w guzikach standard/spacex
     var czyautopilot;
 
     // Zmienne z informacjami do opisu
@@ -26,7 +26,7 @@
     var horsepower = "900 KM";
 
     function domyslny(){
-        plik="<img src=\"teslaSczerwona.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
+        plik="<img src=\"teslaYszara.png\" width=\"600\">";document.getElementById("tesla").innerHTML=plik;
         cena= "CENA: " + cenaZwykla +",00 zł" ;document.getElementById("cena").innerHTML=cena;        
 
         // Opis
@@ -233,13 +233,12 @@
                 <td colspan="6" class="ver"><div style="text-align: center">    Wybierz kolor</div></td>
              </tr>
              <tr>
-                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czerwony" onclick="czerwony()"></div></td>
-                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czarny" onclick="czarny()"></div></td>
                 <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="szary" onclick="szary()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czarny" onclick="czarny()"></div></td>
+                <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="czerwony" onclick="czerwony()"></div></td>
                 <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="zolty" onclick="zolty()"></div></td>
                 <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="zielony" onclick="zielony()"></div></td>
                 <td colspan="1"><div style="text-align: center"><input type="button" value="---" class="bialy" onclick="bialy()"></div></td>
-                
              </tr>
              <tr>
                 <td colspan="6" class="ver">SZCZEGÓŁY TWOJEGO ZAMÓWIENIA: </td>

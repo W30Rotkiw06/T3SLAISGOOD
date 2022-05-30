@@ -20,7 +20,7 @@ footer {
     text-align: center;
     font-size:x-small;
     font-family: Arial;
-    padding-bottom: 4spx;
+    padding-bottom: 4px;
   }
 
   .model{
@@ -38,7 +38,7 @@ footer {
 }
 .model3pct{
     padding: 10px;
-    background-image: url(tesla3szara.png);
+    background-image: url(tesla3zolta.png);
     background-size: 100%;  
     padding-bottom: 36%;
 
@@ -55,7 +55,7 @@ footer {
 .modelypct{
     padding-right: 30%;
     padding: 10px;
-    background-image: url(teslaYzolta.png);
+    background-image: url(teslaYszara.png);
     background-size: 96%;
     padding-bottom: 36%;
 
